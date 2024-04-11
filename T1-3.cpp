@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cmath>
+#include <cmath> // using implemented math functions such as sqrt, pow and etc.
 
 int main(){
     
@@ -7,9 +7,9 @@ int main(){
     std::cout << "enter coefficients (ex: ax^2 + bx + c ) = " ;
     std::cin >> a >> b >> c;
 
-    int delta = (b * b) - (4 * (a * c)) ;
+    int delta = (b * b) - (4 * (a * c)) ; // calculate delta
 
-    if ( 0 < delta ) {
+    if ( 0 < delta ) {  
         std::cout << "x1 : " << ((-1 * b) + sqrt(delta) / (2 * a))
             << std::endl << "x2 : " << std::endl ;
     } else if ( 0 == delta ) {

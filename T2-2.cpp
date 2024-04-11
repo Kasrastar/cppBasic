@@ -1,7 +1,7 @@
 #include <iostream>
-#include <conio.h>
+#include <conio.h> // to get character from user ( getch() function )
 
-bool IsComplete(int);
+bool IsPerfect(int); // function prototype
 
 int main(){
     int n;
@@ -10,19 +10,19 @@ int main(){
         std::cout << "enter n: ";
         std::cin >> n;
     
-        if (IsComplete(n))
+        if (IsPerfect(n))
             std::cout << n << " is complete number " << std::endl ;
         else
             std::cout << "not a perfect number " << std::endl ;
-            
+
         std::cout << "to continue press 'y'." << std::endl ;
     } while (getch() == 'y');
 }
 
-bool IsComplete(int value) {
+bool IsPerfect(int value) { // check perfect numbers
     int sum = 0 ; 
     for (int i = 1; i <= value / 2; i++)
-        if ( 0 == value % i )
+        if ( 0 == value % i ) // find divisor
             sum += i;
-    return ( sum == value ) ? true : false ;
+    return ( sum == value ) ? true : false ; // single line if-else statement 
 }

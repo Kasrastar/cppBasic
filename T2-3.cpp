@@ -9,21 +9,25 @@ int main(){
     const int studentCount = 5;
     double gpa[studentCount] = {0};
 
-    int largest = gpa[0], secondLargest = gpa[0];
+    // find using solution 1
+    int largest = gpa[0], secondLargest = gpa[0]; 
 
     for (int i = 0; i < studentCount; i++) {
+
         std::cout << "enter value for " << i+1 << " : ";
-        std::cin >> gpa[i];
-        if (gpa[i] > largest) {
-            secondLargest = largest;
-            largest = gpa[i];
-        } else if (gpa[i] > secondLargest && gpa[i] < largest) {
-            secondLargest = gpa[i];
+        std::cin >> gpa[i]; // fill array
+
+        if (gpa[i] > largest) { // if find new great value
+            secondLargest = largest; // store last one
+            largest = gpa[i]; // save new great value
+        } else if (gpa[i] > secondLargest && gpa[i] < largest) { // if greater than second andn less than largest
+            secondLargest = gpa[i]; // store as second greatest value
         }
     }
       
     std::cout << "second largest value from solution 1 : " << secondLargest << std::endl ;
 
+    // find using solution 2
     for (int i = 0; i < studentCount - 1; i++) {
         for (int j = 0; j < studentCount - i - 1; j++) {
             if (gpa[j] > gpa[j + 1]) {

@@ -39,5 +39,5 @@ int main(){
             std::cout << "invalid value";
             break;
     }
-
+    return 0; 
 }
