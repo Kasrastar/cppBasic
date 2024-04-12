@@ -1,8 +1,8 @@
 #include <iostream>
 
 // there is two solution for do that.
-// first: using sorting algorithm
-// second: using variables to store second largest value
+// first: using variables to store second largest value
+// second: using sorting algorithm
 
 int main(){
 
